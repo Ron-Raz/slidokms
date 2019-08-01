@@ -1,7 +1,9 @@
 console.log("in inkms.js ver2");
-var pathname= window.location.pathname;
-if( pathname.startsWith('/media/')) { // check if a media entry
+var pathname = window.location.pathname;
+$(function () {
+    console.log("doc ready, pathname=", pathname);
+    if (!pathname.startsWith('/media/')) return;
     console.log("media entry");
-} else {
-    console.log("do nothing")
-}
+    var metadata= $("#entry-metadata").text();
+    console.log("metadata=",metadata);
+});
