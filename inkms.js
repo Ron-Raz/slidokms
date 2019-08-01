@@ -4,6 +4,9 @@ $(function () {
     console.log("doc ready, pathname=", pathname);
     if (!pathname.startsWith('/media/')) return;
     console.log("media entry");
-    var metadata= $("#entry-metadata > dd > div > div").text();
-    console.log("metadata=",metadata);
+    var mt= $("#entry-metadata > dd > div > div").text();
+    var mh= $("#entry-metadata").html();
+
+    console.log("mt=",mt);
+    console.log("mh=",mh);
 });
