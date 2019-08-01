@@ -1,1 +1,1 @@
-console.debug("in inkms.js");
+console.log("in inkms.js");
