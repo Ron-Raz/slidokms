@@ -9,7 +9,7 @@ $(function () {
 });
 var it = 20;
 function mytimer() {
-    var el=$(".")
+    //var el=$(".")
     var mt = $("#entry-metadata > dd > div > div").text();
     it -= 1;
     // stop conditions: found mt | timeout
