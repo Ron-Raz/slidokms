@@ -1,4 +1,4 @@
-console.log("in inkms.js november");
+console.log("in inkms.js oscar");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -7,11 +7,10 @@ $(function () {
     console.log("media entry. setting timer");
     mytimerhandle = window.setInterval(mytimer, 100);
 });
-var it = 20;
+var it = 200;
 function mytimer() {
 
-    var qnaDisplay=$(".qna-on-video-btn.qna-icon-Ask").css("display");
-    console.log("qnaDisplay=",qnaDisplay);
+    console.log("mytimer 1=",$(".qna-on-video-btn")," 2=",$(".qna-on-video-btn").length," 3=",$(".qna-on-video-btn").html());
     var mt = $("#entry-metadata > dd > div > div").text();
     it -= 1;
     // stop conditions: found mt | timeout
@@ -33,5 +32,4 @@ function embedSlido() {
     console.log("slidoIframe=",slidoIframe);
     //$("#wrap").append(slidoIframe);
     // remove semi circle thingy
-    console.log("thingy=",document.querySelector("body > div.mwPlayerContainer.kdark.ua-mouse.ua-osx.ua-chrome.size-large.dvr.play-state.player-out > div.videoHolder.ui-droppable.ui-droppable-disabled > div.qna-on-video-btn.qna-icon-Ask"));
 }
