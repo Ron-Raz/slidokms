@@ -1,4 +1,4 @@
-console.log("in inkms.js");
+console.log("in inkms.js alpha");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -24,5 +24,5 @@ function mytimer() {
 function embedSlido() {
     console.log("embedSlido")
     $("#mySidebar").hide();
-    $("#wrap").append('<iframe style="position:relative; top:100px; left:500px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>');
+    $("#wrap").append('<iframe style="position:absolute; top:100px; left:500px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>');
 }
