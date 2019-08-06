@@ -1,4 +1,4 @@
-console.log("in inkms.js foxtrot");
+console.log("in inkms.js golf");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -25,7 +25,9 @@ function embedSlido() {
     console.log("embedSlido")
     $("#mySidebar").hide();
     var p = $("#mySidebar").position();
-    var slidoIframe= '<iframe style="position:absolute; top:'+Math.trunc(p.top)+'px; left:'+Math.trunc(p.left)+'px; width:'+Math.trunc($("#mySidebar").width())+'px; height:'+Math.trunc($("#mySidebar").height())+'px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>';
+    var slidoIframe= '<iframe frameBorder="0" style="position:absolute; top:'+Math.trunc(p.top)+'px; left:'+Math.trunc(p.left)+'px; width:'+Math.trunc($("#mySidebar").width())+'px; height:'+Math.trunc($("#mySidebar").height()-1)+'px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>';
     console.log("slidoIframe=",slidoIframe);
     $("#wrap").append(slidoIframe);
+    // remove semi circle thingy
+    $(".qna-on-video-btn.qna-icon-Ask").remove();
 }
