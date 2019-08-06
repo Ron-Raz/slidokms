@@ -1,4 +1,4 @@
-console.log("in inkms.js hotel");
+console.log("in inkms.js india");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -25,10 +25,10 @@ function embedSlido() {
     console.log("embedSlido")
     $("#mySidebar").hide();
     var p = $("#mySidebar").position();
+    var qna= $("#mySidebar").is(":visible");
     var slidoIframe= '<iframe frameBorder="0" style="position:absolute; top:'+Math.trunc(p.top)+'px; left:'+Math.trunc(p.left)+'px; width:'+Math.trunc($("#mySidebar").width())+'px; height:'+Math.trunc($("#mySidebar").height()-1)+'px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>';
     console.log("slidoIframe=",slidoIframe);
     $("#wrap").append(slidoIframe);
     // remove semi circle thingy
-    var qna= $(".qna-on-video-btn");
     console.log("qna=",qna);
 }
