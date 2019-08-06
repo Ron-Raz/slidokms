@@ -1,4 +1,4 @@
-console.log("in inkms.js kilo");
+console.log("in inkms.js lima");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -8,8 +8,11 @@ $(function () {
     mytimerhandle = window.setInterval(mytimer, 100);
 });
 var it = 20;
+var inc=0;
 function mytimer() {
-    //var el=$(".")
+    inc+=1;
+    var qnaDisplay=$("body > div.mwPlayerContainer.kdark.ua-mouse.ua-osx.ua-chrome.size-large.dvr.play-state > div.videoHolder.ui-droppable.ui-droppable-disabled > div.qna-on-video-btn.qna-icon-Ask").css("display");
+    console.log("qnaDisplay=",qnaDisplay," inc=",inc);
     var mt = $("#entry-metadata > dd > div > div").text();
     it -= 1;
     // stop conditions: found mt | timeout
