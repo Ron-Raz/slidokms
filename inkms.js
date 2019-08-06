@@ -1,4 +1,4 @@
-console.log("in inkms.js mike");
+console.log("in inkms.js november");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -33,12 +33,5 @@ function embedSlido() {
     console.log("slidoIframe=",slidoIframe);
     //$("#wrap").append(slidoIframe);
     // remove semi circle thingy
-    var q1=$(".qna-on-video-btn.qna-icon-Ask").css("display");
-    var q2=$(".qna-on-video-btn.qna-icon-Ask").is(":visible");
-    var q3=$(".qna-on-video-btn").css("display");
-    var q4=$(".qna-on-video-btn").is(":visible");
-    var q5=$(".qna-on-video-btn .qna-icon-Ask").css("display");
-    var q6=$(".qna-on-video-btn .qna-icon-Ask").is(":visible");
-    
-    console.log("q1=",q1," q2=",q2," q3=",q3," q4=",q4," q5=",q5," q6=",q6);
+    console.log("thingy=",document.querySelector("body > div.mwPlayerContainer.kdark.ua-mouse.ua-osx.ua-chrome.size-large.dvr.play-state.player-out > div.videoHolder.ui-droppable.ui-droppable-disabled > div.qna-on-video-btn.qna-icon-Ask"));
 }
