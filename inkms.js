@@ -1,4 +1,4 @@
-console.log("in inkms.js alpha");
+console.log("in inkms.js bravo");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -7,7 +7,7 @@ $(function () {
     console.log("media entry. setting timer");
     mytimerhandle = window.setInterval(mytimer, 100);
 });
-var it = 15;
+var it = 20;
 function mytimer() {
     var mt = $("#entry-metadata > dd > div > div").text();
     it -= 1;
@@ -24,5 +24,7 @@ function mytimer() {
 function embedSlido() {
     console.log("embedSlido")
     $("#mySidebar").hide();
+    var p = $("#mySidebar").position();
+    console.log("p=", p);
     $("#wrap").append('<iframe style="position:absolute; top:100px; left:500px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>');
 }
