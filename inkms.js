@@ -1,4 +1,4 @@
-console.log("in inkms.js golf");
+console.log("in inkms.js hotel");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -29,5 +29,6 @@ function embedSlido() {
     console.log("slidoIframe=",slidoIframe);
     $("#wrap").append(slidoIframe);
     // remove semi circle thingy
-    $(".qna-on-video-btn.qna-icon-Ask").remove();
+    var qna= $(".qna-on-video-btn");
+    console.log("qna=",qna);
 }
