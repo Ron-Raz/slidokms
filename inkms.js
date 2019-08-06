@@ -1,4 +1,4 @@
-console.log("in inkms.js bravo");
+console.log("in inkms.js charlie");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -26,5 +26,5 @@ function embedSlido() {
     $("#mySidebar").hide();
     var p = $("#mySidebar").position();
     console.log("p=", p);
-    $("#wrap").append('<iframe style="position:absolute; top:100px; left:500px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>');
+    $("#wrap").append('<iframe style="position:absolute; top:'+p.top+String(100)+'px; left:'+String(p.left)+'px; width:'+String($("#mySidebar").width())+'px; height:'+String($("#mySidebar").height())+'px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>');
 }
