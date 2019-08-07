@@ -1,4 +1,4 @@
-console.log("in inkms.js whiskey");
+console.log("in inkms.js xray");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -26,14 +26,14 @@ function mytimer() {
     }
     if( fieldPickModule.length > 0 && metadataModdingDone === false) {
         // hide  always
-        $("#entry-metadata > dt.metadata__label.textSelect__title").remove();
-        $("#entry-metadata > dd.metadata__item.textSelect__items").remove()
-        $("#entry-metadata > dt:nth-child(5)").remove();
-        $("#entry-metadata > dd:nth-child(6)").remove();
+        $("#entry-metadata > dt.metadata__label.textSelect__title").hide();
+        $("#entry-metadata > dd.metadata__item.textSelect__items").hide()
+        $("#entry-metadata > dt:nth-child(5)").hide();
+        $("#entry-metadata > dd:nth-child(6)").hide();
         if( fieldPickModule === 'Use Kaltura') {
             // hide slido event code if not using slido
-            $("#entry-metadata > dt:nth-child(3)").remove();
-            $("#entry-metadata > dd:nth-child(4)").remove();
+            $("#entry-metadata > dt:nth-child(3)").hide();
+            $("#entry-metadata > dd:nth-child(4)").hide();
         }
         metadataModdingDone= true;
     }
