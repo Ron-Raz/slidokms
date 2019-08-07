@@ -1,4 +1,4 @@
-console.log("in inkms.js tango");
+console.log("in inkms.js uniform");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -32,7 +32,7 @@ function embedSlido(code,url) {
 
     console.log("embedSlido")
     var p = $("#mySidebar").position();
-    var slidoIframe= '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:'+Math.trunc(p.top)+'px; left:'+Math.trunc(p.left)+'px; width:'+Math.trunc($("#mySidebar").width())+'px; height:'+Math.trunc($("#mySidebar").height()-1)+'px;" class="box" id="slido" src="'+url+'"></iframe>';
+    var slidoIframe= '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:'+Math.trunc(p.top)+'px; left:'+Math.trunc(p.left)+'px; width:'+Math.trunc($("#mySidebar").width())+'px; height:'+Math.trunc($("#mySidebar").height()-2)+'px;" class="box" id="slido" src="'+url+'"></iframe>';
     console.log("slidoIframe=",slidoIframe);
     $("#wrap").append(slidoIframe);
     // remove semi circle thingy
