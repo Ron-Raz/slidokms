@@ -1,4 +1,4 @@
-console.log("in inkms.js victor");
+console.log("in inkms.js whiskey");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -16,7 +16,7 @@ function mytimer() {
     if (fieldPickModule === 'Use Slido' && usingQnaFromSlido === false) {
         var fieldEventCode = $("#entry-metadata > dd:nth-child(4) > div > div").text().trim();
         var fieldEmbedUrl = $("#entry-metadata > dd:nth-child(6) > div > div").text().trim();
-        var moddedEventCode= '<a href="'+fieldEmbedUrl+'" title="Click to open Slido in a new window">'+fieldEventCode+'</a>';
+        var moddedEventCode= '<a href="'+fieldEmbedUrl+'" target="slidotab" title="Click to open Slido in a new window/tab">'+fieldEventCode+'</a>';
         $("#entry-metadata > dd:nth-child(4) > div > div").html(moddedEventCode);
         console.log("fieldPickModule=", fieldPickModule," fieldEventCode=",fieldEventCode," fieldEmbedUrl=",fieldEmbedUrl);
         //clearInterval(mytimerhandle);
@@ -25,13 +25,15 @@ function mytimer() {
         embedSlido(fieldEventCode,fieldEmbedUrl);
     }
     if( fieldPickModule.length > 0 && metadataModdingDone === false) {
-        // hide slido embed always
-        $("#entry-metadata > dt:nth-child(5)").hide();
-        $("#entry-metadata > dd:nth-child(6)").hide();
+        // hide  always
+        $("#entry-metadata > dt.metadata__label.textSelect__title").remove();
+        $("#entry-metadata > dd.metadata__item.textSelect__items").remove()
+        $("#entry-metadata > dt:nth-child(5)").remove();
+        $("#entry-metadata > dd:nth-child(6)").remove();
         if( fieldPickModule === 'Use Kaltura') {
             // hide slido event code if not using slido
-            $("#entry-metadata > dt:nth-child(3)").hide();
-            $("#entry-metadata > dd:nth-child(4)").hide();
+            $("#entry-metadata > dt:nth-child(3)").remove();
+            $("#entry-metadata > dd:nth-child(4)").remove();
         }
         metadataModdingDone= true;
     }
