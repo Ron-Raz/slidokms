@@ -1,4 +1,4 @@
-console.log("in inkms.js romeo");
+console.log("in inkms.js sierra");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -9,13 +9,15 @@ $(function () {
 });
 var it = 200;
 function mytimer() {
-    var mt = $("#entry-metadata > dd > div > div").text();
+    var fieldPickModule = $("#entry-metadata > dd.metadata__item.textSelect__items > div > a").text();
+    var fieldEventCode = $("#entry-metadata > dd:nth-child(4) > div > div").text();
+    var fieldEmbedUrl = $("#entry-metadata > dd:nth-child(6) > div > div").text();
     it -= 1;
     // stop conditions: found mt | timeout
-    if (mt.length > 2 || it === 0) {
-        console.log("it=", it, "mt=", mt);
+    if (fieldPickModule.length > 2 || it === 0) {
+        console.log("it=", it, "fieldPickModule=", fieldPickModule," fieldEventCode=",fieldEventCode," fieldEmbedUrl=",fieldEmbedUrl);
         clearInterval(mytimerhandle);
-        if (mt.length > 2) {
+        if (fieldPickModule.length > 2) {
             embedSlido();
         }
     }
