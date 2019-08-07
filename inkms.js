@@ -1,4 +1,4 @@
-console.log("in inkms.js quebec");
+console.log("in inkms.js romeo");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -14,7 +14,7 @@ function mytimer() {
     // stop conditions: found mt | timeout
     if (mt.length > 2 || it === 0) {
         console.log("it=", it, "mt=", mt);
-        //clearInterval(mytimerhandle);
+        clearInterval(mytimerhandle);
         if (mt.length > 2) {
             embedSlido();
         }
