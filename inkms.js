@@ -1,4 +1,4 @@
-console.log("in inkms.js papa");
+console.log("in inkms.js quebec");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -9,8 +9,6 @@ $(function () {
 });
 var it = 200;
 function mytimer() {
-
-    console.log("mytimer 1=",$(".qna-on-video-btn")," 2=",$(".qna-on-video-btn").length," 3=",$(".qna-on-video-btn").html());
     var mt = $("#entry-metadata > dd > div > div").text();
     it -= 1;
     // stop conditions: found mt | timeout
@@ -24,12 +22,18 @@ function mytimer() {
 }
 
 function embedSlido() {
+
+    // $(".qna-on-video-btn").css({
+    //     "background-color": "yellowgreen",
+    //     "font-weight": "bold"
+    // });
+
     console.log("embedSlido")
     $("#mySidebar").hide();
     var p = $("#mySidebar").position();
 
     var slidoIframe= '<iframe frameBorder="0" style="position:absolute; top:'+Math.trunc(p.top)+'px; left:'+Math.trunc(p.left)+'px; width:'+Math.trunc($("#mySidebar").width())+'px; height:'+Math.trunc($("#mySidebar").height()-1)+'px;" class="box" id="slido" src="https://app.sli.do/event/udv57pcy"></iframe>';
     console.log("slidoIframe=",slidoIframe);
-    //$("#wrap").append(slidoIframe);
+    $("#wrap").append(slidoIframe);
     // remove semi circle thingy
 }
