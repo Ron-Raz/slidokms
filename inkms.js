@@ -37,13 +37,7 @@ function mytimer() {
         }
         metadataModdingDone = true;
     }
-    var iframe= document.getElementById("slido");
-    if (iframe){
-        var app= iframe.contentWindow.document.getElementById("app");
-        if( el) {
-            console.log('app=',app);
-        }
-    }
+    
 }
 
 function embedSlido(code, url) {
@@ -61,19 +55,3 @@ function embedSlido(code, url) {
 
     // remove semi circle thingy
 }
-
-// var myConfObj = {
-//     iframeMouseOver : false
-//   }
-//   window.addEventListener('blur',function(){
-//     if(myConfObj.iframeMouseOver){
-//       console.log('Wow! Iframe Click!');
-//     }
-//   });
-
-//   document.getElementById('YOUR_CONTAINER_ID').addEventListener('mouseover',function(){
-//      myConfObj.iframeMouseOver = true;
-//   });
-//   document.getElementById('YOUR_CONTAINER_ID').addEventListener('mouseout',function(){
-//       myConfObj.iframeMouseOver = false;
-//   });
