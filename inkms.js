@@ -1,4 +1,4 @@
-console.log("in inkms.js xray");
+console.log("in inkms.js yankee");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -51,11 +51,27 @@ function embedSlido(code, url) {
     var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' + Math.trunc(p.top) + 'px; left:' + Math.trunc(p.left) + 'px; width:' + Math.trunc($("#mySidebar").width()) + 'px; height:' + Math.trunc($("#mySidebar").height() - 2) + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
     console.log("slidoIframe=", slidoIframe);
     $("#wrap").append(slidoIframe);
-    var iframe = $('#slido').contents();
-
-    iframe.find("footer").click(function () {
-        console.log("slido footer click");
-    });
 
     // remove semi circle thingy
 }
+
+// var myConfObj = {
+//     iframeMouseOver : false
+//   }
+//   window.addEventListener('blur',function(){
+//     if(myConfObj.iframeMouseOver){
+//       console.log('Wow! Iframe Click!');
+//     }
+//   });
+
+//   document.getElementById('YOUR_CONTAINER_ID').addEventListener('mouseover',function(){
+//      myConfObj.iframeMouseOver = true;
+//   });
+//   document.getElementById('YOUR_CONTAINER_ID').addEventListener('mouseout',function(){
+//       myConfObj.iframeMouseOver = false;
+//   });
+
+
+window.addEventListener('click', event => {
+    console.log("event.detail=", event.detail);
+});
