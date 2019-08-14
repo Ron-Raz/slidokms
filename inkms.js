@@ -1,4 +1,4 @@
-console.log("in inkms.js yankee");
+console.log("in inkms.js zulu");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -37,6 +37,8 @@ function mytimer() {
         }
         metadataModdingDone = true;
     }
+    var iframe= document.getElementById("slido");
+    console.log("iframe=",iframe);
 }
 
 function embedSlido(code, url) {
@@ -70,8 +72,3 @@ function embedSlido(code, url) {
 //   document.getElementById('YOUR_CONTAINER_ID').addEventListener('mouseout',function(){
 //       myConfObj.iframeMouseOver = false;
 //   });
-
-
-window.addEventListener('click', event => {
-    console.log("event.detail=", event.detail);
-});
