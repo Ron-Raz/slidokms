@@ -1,4 +1,4 @@
-console.log("in inkms.js zulu");
+console.log("in inkms.js alpha");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -38,7 +38,12 @@ function mytimer() {
         metadataModdingDone = true;
     }
     var iframe= document.getElementById("slido");
-    console.log("iframe=",iframe);
+    if (iframe){
+        var app= iframe.contentWindow.document.getElementById("app");
+        if( el) {
+            console.log('app=',app);
+        }
+    }
 }
 
 function embedSlido(code, url) {
