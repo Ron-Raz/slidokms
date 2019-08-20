@@ -1,4 +1,4 @@
-console.log("in inkms.js hotel");
+console.log("in inkms.js india");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -18,7 +18,7 @@ function onWindowResize() {
     if( dets.left != curSlidoDets.left) changes.left= dets.left+"px";
     if( dets.width != curSlidoDets.width) changes.width= dets.width+"px";
     if( dets.height != curSlidoDets.height) changes.height= dets.height+"px";
-    if( Object.keys(dets).length > 0) {
+    if( Object.keys(changes).length > 0) {
         $("#slido").css(changes);
         curSlidoDets= dets;
         console.log("onWindowResize changes=",changes);
