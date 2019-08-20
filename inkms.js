@@ -1,4 +1,4 @@
-console.log("in inkms.js charlie");
+console.log("in inkms.js delta");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -11,15 +11,24 @@ var usingQnaFromSlido = false;
 var metadataModdingDone = false;
 
 function onWindowResize() {
-    calcSlidoSize();
+    var dets= calcSlidoSize();
+    if( dets === curSlidoDets) {
+        // no need to do anything, same size and pos
+    } else {
+        console.log("need to refresh size/pos");
+    }
 }
+
+var curSlidoDets= null;
+
 function calcSlidoSize() {
+    var json= {};
     var p = $("#mySidebar").position();
-    var top= Math.trunc(p.top);
-    var left= Math.trunc(p.left);
-    var height= Math.trunc($("#mySidebar").height() - 2);
-    var width= Math.trunc($("#mySidebar").width());
-    console.log("calcSlidoSize top=",top," left=",left," width=",width," height=",height);
+    json.top= Math.trunc(p.top);
+    json.left= Math.trunc(p.left);
+    json.height= Math.trunc($("#mySidebar").height() - 2);
+    json.width= Math.trunc($("#mySidebar").width());
+    console.log("calcSlidoSize json=",JSON.stringify(json));
     //var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' +  + 'px; left:' +  + 'px; width:' +  + 'px; height:' +  + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
 }
 
@@ -55,17 +64,9 @@ function mytimer() {
 }
 
 function embedSlido(code, url) {
-
-    // $(".qna-on-video-btn").css({
-    //     "background-color": "yellowgreen",
-    //     "font-weight": "bold"
-    // });
-
     console.log("embedSlido");
-    var p = $("#mySidebar").position();
-    var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' + Math.trunc(p.top) + 'px; left:' + Math.trunc(p.left) + 'px; width:' + Math.trunc($("#mySidebar").width()) + 'px; height:' + Math.trunc($("#mySidebar").height() - 2) + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
+    curSlidoDets= calcSlidoSize();
+    var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' + curSlidoDets.top + 'px; left:' + curSlidoDets.left + 'px; width:' + curSlidoDets.width + 'px; height:' + curSlidoDets.height + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
     console.log("slidoIframe=", slidoIframe);
     $("#wrap").append(slidoIframe);
-
-    // remove semi circle thingy
 }
