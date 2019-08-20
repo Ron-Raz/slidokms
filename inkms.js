@@ -1,4 +1,4 @@
-console.log("in inkms.js bravo");
+console.log("in inkms.js charlie");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -10,7 +10,7 @@ $(function () {
 var usingQnaFromSlido = false;
 var metadataModdingDone = false;
 
-function onWindowResise() {
+function onWindowResize() {
     calcSlidoSize();
 }
 function calcSlidoSize() {
@@ -20,7 +20,7 @@ function calcSlidoSize() {
     var height= Math.trunc($("#mySidebar").height() - 2);
     var width= Math.trunc($("#mySidebar").width());
     console.log("calcSlidoSize top=",top," left=",left," width=",width," height=",height);
-    var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' +  + 'px; left:' +  + 'px; width:' +  + 'px; height:' +  + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
+    //var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' +  + 'px; left:' +  + 'px; width:' +  + 'px; height:' +  + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
 }
 
 window.addEventListener("resize", onWindowResize);
