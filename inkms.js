@@ -1,4 +1,4 @@
-console.log("in inkms.js alpha");
+console.log("in inkms.js bravo");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -10,6 +10,20 @@ $(function () {
 var usingQnaFromSlido = false;
 var metadataModdingDone = false;
 
+function onWindowResise() {
+    calcSlidoSize();
+}
+function calcSlidoSize() {
+    var p = $("#mySidebar").position();
+    var top= Math.trunc(p.top);
+    var left= Math.trunc(p.left);
+    var height= Math.trunc($("#mySidebar").height() - 2);
+    var width= Math.trunc($("#mySidebar").width());
+    console.log("calcSlidoSize top=",top," left=",left," width=",width," height=",height);
+    var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' +  + 'px; left:' +  + 'px; width:' +  + 'px; height:' +  + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
+}
+
+window.addEventListener("resize", onWindowResize);
 function mytimer() {
     var fieldPickModule = $("#entry-metadata > dd.metadata__item.textSelect__items > div > a").text().trim();
     // stop conditions: found mt | timeout
