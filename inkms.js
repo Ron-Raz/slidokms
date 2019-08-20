@@ -1,4 +1,4 @@
-console.log("in inkms.js delta");
+console.log("in inkms.js echo");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -29,7 +29,7 @@ function calcSlidoSize() {
     json.height= Math.trunc($("#mySidebar").height() - 2);
     json.width= Math.trunc($("#mySidebar").width());
     console.log("calcSlidoSize json=",JSON.stringify(json));
-    //var slidoIframe = '<iframe frameBorder="1" style="border:1px black solid; position:absolute; top:' +  + 'px; left:' +  + 'px; width:' +  + 'px; height:' +  + 'px;" class="box" id="slido" src="' + url + '"></iframe>';
+    return json;
 }
 
 window.addEventListener("resize", onWindowResize);
