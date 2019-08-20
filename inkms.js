@@ -1,4 +1,4 @@
-console.log("in inkms.js echo");
+console.log("in inkms.js foxtrot");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -15,7 +15,8 @@ function onWindowResize() {
     if( dets === curSlidoDets) {
         // no need to do anything, same size and pos
     } else {
-        console.log("need to refresh size/pos");
+        $("#slido").css({"top":dets.top+"px","left":dets.left+"px","width":dets.width+"px","height":dets.height+"px"});
+        curSlidoDets= dets;
     }
 }
 
