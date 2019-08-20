@@ -1,4 +1,4 @@
-console.log("in inkms.js foxtrot");
+console.log("in inkms.js golf");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -9,18 +9,20 @@ $(function () {
 });
 var usingQnaFromSlido = false;
 var metadataModdingDone = false;
+var curSlidoDets= null;
 
 function onWindowResize() {
     var dets= calcSlidoSize();
     if( dets === curSlidoDets) {
         // no need to do anything, same size and pos
+        console.log("no refresh needed dets === curSlidoDets");
     } else {
         $("#slido").css({"top":dets.top+"px","left":dets.left+"px","width":dets.width+"px","height":dets.height+"px"});
         curSlidoDets= dets;
     }
 }
 
-var curSlidoDets= null;
+
 
 function calcSlidoSize() {
     var json= {};
