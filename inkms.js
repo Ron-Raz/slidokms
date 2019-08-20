@@ -1,4 +1,4 @@
-console.log("in inkms.js golf");
+console.log("in inkms.js hotel");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -13,12 +13,17 @@ var curSlidoDets= null;
 
 function onWindowResize() {
     var dets= calcSlidoSize();
-    if( dets === curSlidoDets) {
-        // no need to do anything, same size and pos
-        console.log("no refresh needed dets === curSlidoDets");
-    } else {
-        $("#slido").css({"top":dets.top+"px","left":dets.left+"px","width":dets.width+"px","height":dets.height+"px"});
+    var changes= {};
+    if( dets.top != curSlidoDets.top ) changes.top= dets.top+"px";
+    if( dets.left != curSlidoDets.left) changes.left= dets.left+"px";
+    if( dets.width != curSlidoDets.width) changes.width= dets.width+"px";
+    if( dets.height != curSlidoDets.height) changes.height= dets.height+"px";
+    if( Object.keys(dets).length > 0) {
+        $("#slido").css(changes);
         curSlidoDets= dets;
+        console.log("onWindowResize changes=",changes);
+    } else {
+        console.log("onWindowResize nochanges");
     }
 }
 
