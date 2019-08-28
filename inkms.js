@@ -1,11 +1,16 @@
-console.log("in inkms.js india");
+console.log("in inkms.js juliet");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
     console.log("doc ready, pathname=", pathname);
-    if (!pathname.startsWith('/media/')) return;
-    console.log("media entry. setting timer");
-    mytimerhandle = window.setInterval(mytimer, 100);
+    if (pathname.startsWith('/media/')) {
+        console.log("media entry. setting timer");
+        mytimerhandle = window.setInterval(mytimer, 100);
+    } else if (pathname.startsWith('/edit/')) {
+        $( "#customdata-PickQnAModule" ).change(function() {
+            console.log('process qna change');
+          });
+    }
 });
 var usingQnaFromSlido = false;
 var metadataModdingDone = false;
