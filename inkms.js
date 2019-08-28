@@ -1,7 +1,7 @@
-console.log("in inkms.js mikey");
+console.log("in inkms.js november");
 var pathname = window.location.pathname;
 var mytimerhandle;
-var serviceUrl= 'http://rraz.herokuapp.com/'
+var serviceUrl= 'https://rraz.herokuapp.com/'
 $(function () {
     console.log("doc ready, pathname=", pathname);
     if (pathname.startsWith('/media/')) {
