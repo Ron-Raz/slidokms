@@ -1,4 +1,4 @@
-console.log("in inkms.js mike");
+console.log("in inkms.js mikey");
 var pathname = window.location.pathname;
 var mytimerhandle;
 var serviceUrl= 'http://rraz.herokuapp.com/'
