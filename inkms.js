@@ -1,6 +1,7 @@
-console.log("in inkms.js lima");
+console.log("in inkms.js mike");
 var pathname = window.location.pathname;
 var mytimerhandle;
+var serviceUrl= 'http://rraz.herokuapp.com/'
 $(function () {
     console.log("doc ready, pathname=", pathname);
     if (pathname.startsWith('/media/')) {
@@ -14,8 +15,12 @@ $(function () {
             var tokens= pathname.split('/');
             var entryid= tokens[tokens.length-1];
             var value= $( this ).val();
-            console.log('pid=',pid,' entryid=',entryid,' value=',value);
-          });
+            //console.log('pid=',pid,' entryid=',entryid,' value=',value);
+            $.post( serviceUrl, { 'partnerid': pid, 'entryid': entryid, 'value':value })
+                .done(function( data ) {
+                    console.log('response=',data);
+                });
+        });
     }
 });
 var usingQnaFromSlido = false;
