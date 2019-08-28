@@ -1,4 +1,4 @@
-console.log("in inkms.js juliet");
+console.log("in inkms.js kilo");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -8,7 +8,9 @@ $(function () {
         mytimerhandle = window.setInterval(mytimer, 100);
     } else if (pathname.startsWith('/edit/')) {
         $( "#customdata-PickQnAModule" ).change(function() {
-            console.log('process qna change');
+            //console.log('process qna change');
+            // get partnerid
+            console.log('pid=',window.kms_kWidgetJsLoader_partnerId);
           });
     }
 });
