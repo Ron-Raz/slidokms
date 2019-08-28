@@ -1,4 +1,4 @@
-console.log("in inkms.js kilo");
+console.log("in inkms.js lima");
 var pathname = window.location.pathname;
 var mytimerhandle;
 $(function () {
@@ -10,7 +10,11 @@ $(function () {
         $( "#customdata-PickQnAModule" ).change(function() {
             //console.log('process qna change');
             // get partnerid
-            console.log('pid=',window.kms_kWidgetJsLoader_partnerId);
+            var pid= window.kms_kWidgetJsLoader_partnerId;
+            var tokens= pathname.split('/');
+            var entryid= tokens[tokens.length-1];
+            var value= $( this ).val();
+            console.log('pid=',pid,' entryid=',entryid,' value=',value);
           });
     }
 });
